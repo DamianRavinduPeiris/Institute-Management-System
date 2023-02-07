@@ -12,7 +12,7 @@ public class DBConnection {
 
     private DBConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        connection=DriverManager.getConnection("jdbc:mysql://localhost/apex_institute","root","1234");
+        connection=DriverManager.getConnection("jdbc:mysql://localhost/apex_institute",MySqlAuthenticatorController.username,MySqlAuthenticatorController.password);
     }
     public static DBConnection getInstance() throws SQLException, ClassNotFoundException {
         if(dbc==null){

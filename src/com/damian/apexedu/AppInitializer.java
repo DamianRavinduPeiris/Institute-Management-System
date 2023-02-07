@@ -17,8 +17,8 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/com/damian/apexedu/view/HomeScreen.fxml"))));
-        primaryStage.setMaximized(true);
+        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/com/damian/apexedu/view/MySqlAuth.fxml"))));
+        primaryStage.setMaximized(false);
         primaryStage.getIcons().add(new Image("/com/damian/apexedu/assets/apex.png"));
         primaryStage.setTitle("APEX Institute.");
         primaryStage.show();

@@ -114,6 +114,7 @@ public class Navigator {
 
     }
     public static void changeUI(Stage stage,String location ) throws IOException {
+        stage.setMaximized(true);
         stage.close();
         stage.setScene(new Scene(FXMLLoader.load(Navigator.class.getResource("/com/damian/apexedu/view/"+location))));
         stage.show();

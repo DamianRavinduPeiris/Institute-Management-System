@@ -29,14 +29,10 @@ public class MySqlAuthenticatorController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Node [] nodeArray1 = {t1,t2};
-        for(Node n : nodeArray1){
-        Animator.setLightSpeedIn(n);
-        }
-        Node [] nodeArray2 = {b1,b2};
-        for(Node n : nodeArray2){
-            Animator.setShake(n);
-        }
+    new LightSpeedIn(t1).play();
+    new LightSpeedIn(t2).play();
+    new Shake(b1).play();
+    new Shake(b2).play();
     }
 
     public void t1OnAction(ActionEvent actionEvent) {
