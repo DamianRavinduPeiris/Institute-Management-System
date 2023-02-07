@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="523.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.damian.apexedu.control.AttendanceViewerController">
+   <children>
+      <Label fx:id="l1" layoutX="318.0" prefHeight="47.0" prefWidth="292.0" style="-fx-background-color: yellow;" text="MY ATTENDANCE." underline="true">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="48.0" layoutY="232.0" prefHeight="291.0" prefWidth="768.0" style="-fx-background-color: white;">
+        <columns>
+          <TableColumn fx:id="c1" prefWidth="410.0" text="DATE." />
+            <TableColumn fx:id="c2" prefWidth="357.0" text="STATUS." />
+        </columns>
+      </TableView>
+      <ImageView fx:id="i2" fitHeight="184.0" fitWidth="209.0" layoutX="342.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/calander.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

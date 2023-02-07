@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="779.0" prefWidth="1248.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.damian.apexedu.control.StudentDashBoardController">
+   <children>
+      <AnchorPane fx:id="ap" layoutX="266.0" layoutY="136.0" prefHeight="691.0" prefWidth="1098.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fx:id="i3" fitHeight="605.0" fitWidth="869.0" layoutX="55.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/st.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <JFXButton fx:id="undergradDetails" buttonType="RAISED" layoutY="259.0" onAction="#undergradDetailsOnAction" prefHeight="37.0" prefWidth="243.0" style="-fx-background-color: black;" text="EDIT/VIEW MY DETAILS." textFill="#ebe5e5">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ccsAttendance" buttonType="RAISED" layoutX="1.0" layoutY="326.0" onAction="#ccsAttendanceOnAction" prefHeight="37.0" prefWidth="243.0" style="-fx-background-color: black;" text="VIEW MY ATTENDENCE." textFill="#f5eeee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="i1" fitHeight="162.0" fitWidth="243.0" layoutX="5.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/studentLogo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="studentName" layoutX="3.0" layoutY="172.0" prefHeight="35.0" prefWidth="243.0" style="-fx-background-color: yellow;">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="studentID" layoutX="3.0" layoutY="207.0" prefHeight="37.0" prefWidth="243.0" style="-fx-background-color: yellow;">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="hndNotices" buttonType="RAISED" layoutX="1.0" layoutY="404.0" onAction="#hndNoticesOnAction" prefHeight="37.0" prefWidth="252.0" style="-fx-background-color: black;" text="VIEW NOTICES." textFill="#fceeee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="undergradPayements" buttonType="RAISED" layoutX="-1.0" layoutY="573.0" onAction="#undergradPayementsOnAction" prefHeight="37.0" prefWidth="252.0" style="-fx-background-color: black;" text="MY PAYMENTS." textFill="#e8dede">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="homeButton" buttonType="RAISED" layoutX="-4.0" layoutY="644.0" onAction="#homeOnAction" prefHeight="37.0" prefWidth="262.0" style="-fx-background-color: BLACK;" text="HOME." textFill="#f8e7e7" />
+      <JFXButton fx:id="ccsNotices" buttonType="RAISED" layoutX="5.0" layoutY="404.0" onAction="#ccsNoticesOnAction" prefHeight="37.0" prefWidth="243.0" style="-fx-background-color: black;" text="VIEW NOTICES." textFill="#eee4e4">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="undergradNotices" buttonType="RAISED" layoutX="-3.0" layoutY="404.0" onAction="#undergradNoticesOnAction" prefHeight="37.0" prefWidth="252.0" style="-fx-background-color: black;" text="VIEW NOTICES." textFill="#ebdfdf">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ccsDetails" buttonType="RAISED" layoutX="-1.0" layoutY="259.0" onAction="#ccsDetailsOnAction" prefHeight="37.0" prefWidth="243.0" style="-fx-background-color: black;" text="EDIT/VIEW MY DETAILS." textFill="#e8e5e5">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="hndDetails" buttonType="RAISED" layoutX="-1.0" layoutY="259.0" onAction="#hndDetailsOnAction" prefHeight="37.0" prefWidth="243.0" style="-fx-background-color: black;" text="EDIT/VIEW MY DETAILS." textFill="#eee7e7">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="undergradAttendance" buttonType="RAISED" layoutX="-6.0" layoutY="326.0" onAction="#undergradAttendanceOnAction" prefHeight="37.0" prefWidth="252.0" style="-fx-background-color: black;" text="VIEW MY ATTENDENCE." textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="hndAttendance" buttonType="RAISED" layoutX="-1.0" layoutY="326.0" onAction="#hndAttendanceOnAction" prefHeight="37.0" prefWidth="252.0" style="-fx-background-color: black;" text="VIEW MY ATTENDENCE." textFill="#eeeaea">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="obButton" buttonType="RAISED" layoutX="-3.0" layoutY="488.0" onAction="#obButtonOnAction" prefHeight="37.0" prefWidth="252.0" style="-fx-background-color: BLACK;" text="JOIN ONLINE CLASSES." textFill="#f8e7e7">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="hndPayments" buttonType="RAISED" layoutX="5.0" layoutY="573.0" onAction="#hndPaymentsOnAction" prefHeight="37.0" prefWidth="243.0" style="-fx-background-color: black;" text="MY PAYMENTS." textFill="#eee8e8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ccsPayments" buttonType="RAISED" layoutX="-4.0" layoutY="573.0" onAction="#ccsPaymentsOnAction" prefHeight="37.0" prefWidth="262.0" style="-fx-background-color: black;" text="MY PAYMENTS." textFill="#f5ecec">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="welcomeLabel" layoutX="550.0" layoutY="14.0" prefHeight="47.0" prefWidth="286.0" style="-fx-background-color: lightblue;" text="WELCOME BACK!">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="greetings" layoutX="550.0" layoutY="77.0" prefHeight="41.0" prefWidth="272.0" style="-fx-background-color: yellow;">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateAndTime" layoutX="989.0" layoutY="24.0" prefHeight="37.0" prefWidth="358.0" style="-fx-background-color: white;">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

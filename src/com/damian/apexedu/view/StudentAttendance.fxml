@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.damian.apexedu.control.StudentAttendanceController">
+   <children>
+      <AnchorPane layoutX="67.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="917.0" prefWidth="1644.0">
+         <children>
+            <Label layoutX="351.0" layoutY="33.0" prefHeight="36.0" prefWidth="302.0" style="-fx-background-color: black;" text="MANAGE ATTENDANCE." textAlignment="CENTER" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="image" fitHeight="216.0" fitWidth="261.0" layoutX="20.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/a.png" />
+               </image>
+            </ImageView>
+            <JFXComboBox fx:id="idCmb" layoutX="328.0" layoutY="179.0" onAction="#idCmbOnAction" prefHeight="25.0" prefWidth="370.0" promptText="STUDENT ID." style="-fx-background-color: lightgreen;" visibleRowCount="10000" />
+            <JFXTextField fx:id="date" layoutX="335.0" layoutY="108.0" prefHeight="25.0" prefWidth="370.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></JFXTextField>
+            <JFXComboBox fx:id="statusCmb" layoutX="328.0" layoutY="287.0" onAction="#statusCmbOnAction" prefHeight="25.0" prefWidth="370.0" promptText="STATUS." style="-fx-background-color: lightgreen;" />
+            <JFXTextField fx:id="name" layoutX="330.0" layoutY="223.0" prefHeight="25.0" prefWidth="357.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="ccs" layoutX="335.0" layoutY="345.0" onAction="#ccsAttendanceOnAction" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: yellow;" text="MARK ATTENDANCE.(CCS.)" />
+            <JFXButton fx:id="hnd" layoutX="328.0" layoutY="423.0" onAction="#hndAttendanceOnAction" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: yellow;" text="MARK ATTENDANCE.(HND.)" />
+            <JFXButton fx:id="undergrad" layoutX="326.0" layoutY="383.0" onAction="#undergradAttendanceOnAction" prefHeight="25.0" prefWidth="221.0" style="-fx-background-color: yellow;" text="MARK ATTENDANCE.(UNDERGRAD.)" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

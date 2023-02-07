@@ -1,0 +1,200 @@
+CREATE DATABASE apex_institute;
+
+
+USE apex_institute;
+
+CREATE TABLE admin_details(
+	admin_id VARCHAR(45) PRIMARY KEY,
+	username VARCHAR(45) UNIQUE,
+	password VARCHAR(45)
+);
+
+CREATE TABLE general_notices(
+	admin_id VARCHAR(45),
+	date DATE,
+	notice TEXT,
+	CONSTRAINT FOREIGN KEY(admin_id) REFERENCES admin_details(admin_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE program_details(	
+	program_id VARCHAR(45) PRIMARY KEY,
+	program_name VARCHAR(45),
+	program_fee DOUBLE
+);
+
+CREATE TABLE ccs_student_details(
+	program_id VARCHAR(45) ,
+	student_id VARCHAR(45) PRIMARY KEY,
+	student_name VARCHAR(45),
+	student_address TEXT,
+	student_email VARCHAR(45),
+	telephone INT,
+	CONSTRAINT FOREIGN KEY(program_id) REFERENCES program_details(program_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+CREATE TABLE hnd_student_details(
+	program_id VARCHAR(45) ,
+	student_id VARCHAR(45) PRIMARY KEY,
+	student_name VARCHAR(45),
+	student_address TEXT,
+	student_email VARCHAR(45),
+	telephone INT,
+	CONSTRAINT FOREIGN KEY(program_id) REFERENCES program_details(program_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+CREATE TABLE undergrad_student_details(
+	program_id VARCHAR(45) ,
+	student_id VARCHAR(45) PRIMARY KEY,
+	student_name VARCHAR(45),
+	student_address TEXT,
+	student_email VARCHAR(45),
+	telephone INT,
+	CONSTRAINT FOREIGN KEY(program_id) REFERENCES program_details(program_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+CREATE TABLE ccs_student_attendance(
+	date DATE,
+	student_id VARCHAR(45),
+	status VARCHAR(45),
+	CONSTRAINT FOREIGN KEY(student_id) REFERENCES ccs_student_details(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+	
+);
+
+
+CREATE TABLE hnd_student_attendance(
+	date DATE ,
+	student_id VARCHAR(45),
+	status VARCHAR(45),
+	CONSTRAINT FOREIGN KEY(student_id) REFERENCES hnd_student_details(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
+CREATE TABLE undergrad_student_attendance(
+	date DATE ,
+	student_id VARCHAR(45),
+	status VARCHAR(45),
+	CONSTRAINT FOREIGN KEY(student_id) REFERENCES undergrad_student_details(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+CREATE TABLE lecturer_details(
+	lecturer_id VARCHAR(45) ,
+	program_id VARCHAR(45),
+	lecturer_name VARCHAR(45),
+	lecturer_address VARCHAR(45),
+	lecturer_email VARCHAR(45),
+	lecturer_telephone INT,
+	basic_salary DOUBLE
+);
+
+	
+
+
+CREATE TABLE subject_detals(
+	program_id VARCHAR(45),
+	subject_id VARCHAR(45),
+	subject_name VARCHAR(45),
+	lecturer_id VARCHAR(45),
+	CONSTRAINT FOREIGN KEY(lecturer_id) REFERENCES lecturer_details(lecturer_id) ON DELETE CASCADE ON UPDATE CASCADE
+);	
+
+
+CREATE TABLE ccs_student_credentials(
+	student_id VARCHAR(45) ,
+	username VARCHAR(45) PRIMARY KEY,	
+	password VARCHAR(45),
+	CONSTRAINT FOREIGN KEY(student_id) REFERENCES ccs_student_details(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE hnd_student_credentials(
+	student_id VARCHAR(45) ,
+	username VARCHAR(45) PRIMARY KEY,	
+	password VARCHAR(45),
+	CONSTRAINT FOREIGN KEY(student_id) REFERENCES hnd_student_details(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE undergrad_student_credentials(
+	student_id VARCHAR(45) ,
+	username VARCHAR(45) PRIMARY KEY,	
+	password VARCHAR(45),
+	CONSTRAINT FOREIGN KEY(student_id) REFERENCES undergrad_student_details(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
+	
+CREATE TABLE lecturer_credentials(
+	lecturer_id VARCHAR(45),
+	username VARCHAR(45) PRIMARY KEY,	
+	password VARCHAR(45)
+);
+
+
+CREATE TABLE ccs_fees(
+	date DATE,
+	student_id VARCHAR(45),
+	student_name VARCHAR(45),
+	payment_description VARCHAR(45),
+	amount DOUBLE,
+	CONSTRAINT FOREIGN KEY (student_id) REFERENCES ccs_student_details(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
+CREATE TABLE hnd_fees(
+	date DATE,
+	student_id VARCHAR(45),
+	student_name VARCHAR(45),
+	payment_description VARCHAR(45),
+	amount DOUBLE,
+	CONSTRAINT FOREIGN KEY (student_id) REFERENCES hnd_student_details(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+CREATE TABLE undergrad_fees(
+	date DATE,
+	student_id VARCHAR(45),
+	student_name VARCHAR(45),
+	payment_description VARCHAR(45),
+	amount DOUBLE,
+	CONSTRAINT FOREIGN KEY (student_id) REFERENCES undergrad_student_details(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+CREATE TABLE ccs_announcements(
+	date DATE,
+	lecturer_name VARCHAR(45),
+	description TEXT,
+	due_date DATE
+);
+	
+CREATE TABLE hnd_announcements(
+	date DATE,
+	lecturer_name VARCHAR(45),
+	description TEXT,
+	due_date DATE
+);
+	
+CREATE TABLE undergrad_announcements(
+	date DATE,
+	lecturer_name VARCHAR(45),
+	description TEXT,
+	due_date DATE
+);
+
+	
+
+
+		
+	
+	
+	
+	
+
+	
+	
+
+	
+	

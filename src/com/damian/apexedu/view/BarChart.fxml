@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.damian.apexedu.control.BarChartController">
+    <children>
+        <Label fx:id="label" layoutX="105.0" layoutY="14.0" prefHeight="41.0" prefWidth="481.0" style="-fx-background-color: yellow;" text="REVENUE GENERATED THROUGH STUDENT FEES. - BAR CHART VIEW." underline="true">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <BarChart fx:id="barChart" layoutX="21.0" layoutY="83.0" prefHeight="297.0" prefWidth="648.0">
+            <xAxis>
+                <CategoryAxis label="STUDENT TYPE." side="BOTTOM" style="-fx-background-color: lightblue;" fx:id="xAxis">
+                    <tickLabelFont>
+                        <Font name="System Bold Italic" size="8.0" />
+                    </tickLabelFont>
+                </CategoryAxis>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" label="FEES." prefHeight="272.0" prefWidth="46.0" side="LEFT" style="-fx-background-color: lightblue;">
+                    <tickLabelFont>
+                        <Font name="System Bold Italic" size="8.0" />
+                    </tickLabelFont>
+                </NumberAxis>
+            </yAxis>
+        </BarChart>
+    </children>
+</AnchorPane>

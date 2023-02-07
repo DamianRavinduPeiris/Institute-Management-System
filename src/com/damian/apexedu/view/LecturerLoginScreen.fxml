@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.damian.apexedu.control.LecturerLoginController">
+   <children>
+      <ImageView fx:id="image" fitHeight="361.0" fitWidth="546.0" layoutX="173.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/l7.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="ap" layoutX="667.0" layoutY="136.0" prefHeight="496.0" prefWidth="484.0" style="-fx-background-color: white;">
+         <children>
+            <JFXTextField fx:id="t1" layoutX="21.0" layoutY="154.0" onAction="#t1OnAction" prefHeight="25.0" prefWidth="287.0" promptText="ENTER USERNAME HERE...">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="t2" layoutX="21.0" layoutY="204.0" onAction="#t2OnAction" prefHeight="25.0" prefWidth="287.0" promptText="ENTER PASSWORD HERE..." />
+            <JFXCheckBox fx:id="sp" layoutX="26.0" layoutY="248.0" onAction="#spOnAction" onMouseEntered="#spMouseEntered" prefHeight="18.0" prefWidth="117.0" style="-fx-background-color: WHITE;" text="SHOW PASSWORD?">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="90.0" layoutY="339.0" onAction="#loginOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="37.0" prefWidth="223.0" style="-fx-background-color: white;" text="LOGIN.">
+               <font>
+                  <Font size="16.0" />
+               </font></JFXButton>
+            <Label fx:id="fp" layoutX="127.0" layoutY="412.0" onMouseClicked="#fpOnAction" prefHeight="21.0" prefWidth="149.0" text="FORGOT PASSWORD?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="l1" layoutX="26.0" layoutY="29.0" prefHeight="37.0" prefWidth="252.0" style="-fx-background-color: yellow;" text="LECTURER LOGIN." underline="true">
+               <font>
+                  <Font name="Berlin Sans FB" size="31.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="t3" layoutX="152.0" layoutY="290.0" prefHeight="25.0" prefWidth="180.0" />
+            <JFXComboBox fx:id="cmb" layoutX="62.0" layoutY="93.0" prefHeight="25.0" prefWidth="180.0" promptText="SELECT PROGRAM." style="-fx-background-color: lightgreen;" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="dateAndTime" layoutX="322.0" layoutY="97.0" prefHeight="37.0" prefWidth="287.0" style="-fx-background-color: white;">
+         <font>
+            <Font name="Berlin Sans FB" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="greetings" layoutX="139.0" layoutY="14.0" prefHeight="65.0" prefWidth="422.0" style="-fx-background-color: white;" textFill="#1b0101" underline="true">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="39.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="1090.0" layoutY="78.0" onMouseClicked="#goHomeOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/home.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

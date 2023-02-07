@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.damian.apexedu.control.OnlineClassesController">
+   <children>
+      <WebView fx:id="webView" layoutX="-119.0" layoutY="59.0" prefHeight="768.0" prefWidth="1556.0" />
+      <JFXTextField fx:id="urlField" layoutX="84.0" layoutY="14.0" onAction="#urlFieldOnAction" prefHeight="25.0" prefWidth="366.0" promptText="ENTER URL HERE...">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="goButton" layoutX="480.0" layoutY="14.0" onAction="#goOnAction" prefHeight="25.0" prefWidth="202.0" style="-fx-background-color: lightgreen;" text="GO!">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="52.0" fitWidth="69.0" layoutX="8.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/APEX.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="69.0" layoutX="1265.0" onMouseClicked="#goToHomeScreen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/sadas.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="69.0" layoutX="1181.0" layoutY="1.0" onMouseClicked="#goToDashBoard" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/junior.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="dateAndTime" layoutX="800.0" layoutY="14.0" prefHeight="27.0" prefWidth="318.0" style="-fx-background-color: yellow;">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
