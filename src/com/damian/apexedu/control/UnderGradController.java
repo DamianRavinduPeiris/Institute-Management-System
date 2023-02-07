@@ -79,6 +79,8 @@ public class UnderGradController implements Initializable,Runnable {
             add.setVisible(false);
             view.setVisible(false);
             delete.setVisible(false);
+            t1.setText(StudentLoginController.studentID);
+            t1OnAction(new ActionEvent());
         }
         else{
             new Bounce(cmb).play();
