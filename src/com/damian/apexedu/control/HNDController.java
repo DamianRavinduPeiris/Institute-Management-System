@@ -78,7 +78,8 @@ public class HNDController implements Initializable,Runnable {
             t1OnAction(new ActionEvent());
         }
         else{
-           Animator.setBounce(cmb);
+            cmb.setVisible(true);
+            Animator.setBounce(cmb);
             add.setVisible(false);
             view.setVisible(false);
             update.setVisible(false);

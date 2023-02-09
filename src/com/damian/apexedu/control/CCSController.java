@@ -71,6 +71,7 @@ public class CCSController implements Initializable,Runnable {
             t1.setText(StudentLoginController.studentID);
             t1OnAction(new ActionEvent());
         } else {
+            cmb.setVisible(true);
             Animator.setBounce(cmb);
             add.setVisible(false);
             view.setVisible(false);

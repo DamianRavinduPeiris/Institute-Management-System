@@ -4,6 +4,7 @@ import animatefx.animation.Bounce;
 import animatefx.animation.JackInTheBox;
 import animatefx.animation.LightSpeedIn;
 import animatefx.animation.Shake;
+import com.damian.apexedu.animations.Animator;
 import com.damian.apexedu.db.DBConnection;
 import com.damian.apexedu.dto.UNDERGRAD_DTO;
 import com.damian.apexedu.dto.UNDERGRAD_Fees_DTO;
@@ -83,7 +84,8 @@ public class UnderGradController implements Initializable,Runnable {
             t1OnAction(new ActionEvent());
         }
         else{
-            new Bounce(cmb).play();
+            Animator.setBounce(cmb);
+            cmb.setVisible(true);
             add.setVisible(false);
             view.setVisible(false);
             update.setVisible(false);
