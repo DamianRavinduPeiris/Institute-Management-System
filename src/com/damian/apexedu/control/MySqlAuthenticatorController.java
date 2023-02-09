@@ -51,11 +51,16 @@ public class MySqlAuthenticatorController implements Initializable {
         Stage stage = (Stage) b1.getScene().getWindow();
         username = t1.getText();
         password = t2.getText();
-        try {
-            Navigator.navigate(stage, Routes.HOMESCREEN);
-        } catch (IOException e) {
-            AlertSender.sendAlert(e.getLocalizedMessage(), "ERROR", Alert.AlertType.ERROR);
+        if (username.isEmpty() || password.isEmpty()) {
+            AlertSender.sendAlert("Please enter your SQL username and password!", "ERROR", Alert.AlertType.ERROR);
 
+        }else {
+            try {
+                Navigator.navigate(stage, Routes.HOMESCREEN);
+            } catch (IOException e) {
+                AlertSender.sendAlert(e.getLocalizedMessage(), "ERROR", Alert.AlertType.ERROR);
+
+            }
         }
 
     }

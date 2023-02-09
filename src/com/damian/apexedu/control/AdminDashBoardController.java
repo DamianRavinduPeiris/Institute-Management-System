@@ -23,6 +23,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
@@ -97,53 +98,48 @@ public class AdminDashBoardController implements Initializable {
             Animator.setShake(image);
         }
        if(s.equals("ccs")){
+           ccs.setTextFill(Color.WHITE);
            setFocusAndPaint(ccs);
-          Animator.setShake(ccs);
        }
         if(s.equals("hnd")){
+            hnd.setTextFill(Color.WHITE);
             setFocusAndPaint(hnd);
-            Animator.setShake(hnd);
         }
         if(s.equals("undergrad")){
+            undergrad.setTextFill(Color.WHITE);
             setFocusAndPaint(undergrad);
-            Animator.setShake(undergrad);
         }
         if(s.equals("lecturers")){
+            undergrad.setTextFill(Color.WHITE);
             setFocusAndPaint(lecturers);
-            Animator.setShake(lecturers);
         }
         if(s.equals("finance")){
+            finance.setTextFill(Color.WHITE);
             setFocusAndPaint(finance);
-            Animator.setShake(finance);
 
         }
         if(s.equals("homeButton")){
+            homeButton.setTextFill(Color.WHITE);
             setFocusAndPaint(homeButton);
-            Animator.setShake(homeButton);
 
         }
         if(s.equals("CCSAttendance")){
+            CCSAttendance.setTextFill(Color.WHITE);
             setFocusAndPaint(CCSAttendance);
-            Animator.setShake(CCSAttendance);
         }
         if(s.equals("HNDAttendance")){
+            HNDAttendance.setTextFill(Color.WHITE);
             setFocusAndPaint(HNDAttendance);
-            Animator.setShake(HNDAttendance);
         }
         if(s.equals("UNDERGRADAttendance")){
+            UNDERGRADAttendance.setTextFill(Color.WHITE);
             setFocusAndPaint(UNDERGRADAttendance);
-            Animator.setShake(UNDERGRADAttendance);
         }
     }
     public void setFocusAndPaint(Node node){
+        Animator.setShake(node);
         node.requestFocus();
-        node.setStyle("-fx-background-color: #00b0ff");
-
-        //if mouse is exited clean the colour.
-
-        node.setOnMouseExited(event -> {
-            node.setStyle("-fx-background-color: #FFFFFF");
-        });
+        node.setStyle("-fx-background-color: #0c1010");
     }
 
 
@@ -184,5 +180,50 @@ public class AdminDashBoardController implements Initializable {
 
     public void financeOnAction(ActionEvent actionEvent) throws IOException {
         Navigator.navigate(ap,Routes.PIECHART);
+    }
+
+    public void mouseExited(MouseEvent mouseEvent) {
+        String s = ((Button) mouseEvent.getSource()).getId();//Getting the ID of the exited node.
+        if(s.equals("ccs")){
+            ccs.setTextFill(Color.BLACK);
+            resetColor(ccs);
+        }
+        if(s.equals("hnd")){
+            hnd.setTextFill(Color.BLACK);
+            resetColor(hnd);
+        }
+        if(s.equals("undergrad")){
+            undergrad.setTextFill(Color.BLACK);
+            resetColor(undergrad);
+        }
+        if(s.equals("lecturers")){
+            lecturers.setTextFill(Color.BLACK);
+            resetColor(lecturers);
+        }
+        if(s.equals("finance")){
+            finance.setTextFill(Color.BLACK);
+            resetColor(finance);
+        }
+        if(s.equals("homeButton")){
+            homeButton.setTextFill(Color.BLACK);
+            resetColor(homeButton);
+        }
+        if(s.equals("CCSAttendance")){
+            CCSAttendance.setTextFill(Color.BLACK);
+            resetColor(CCSAttendance);
+        }
+        if(s.equals("HNDAttendance")){
+            HNDAttendance.setTextFill(Color.BLACK);
+            resetColor(HNDAttendance);
+        }
+        if(s.equals("UNDERGRADAttendance")){
+            UNDERGRADAttendance.setTextFill(Color.BLACK);
+            resetColor(UNDERGRADAttendance);
+        }
+
+    }
+    public void resetColor(Node node){
+        Animator.setShake(node);
+        node.setStyle("-fx-background-color: #f3f3f5");
     }
 }

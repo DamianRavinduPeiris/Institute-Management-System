@@ -28,12 +28,12 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <JFXButton fx:id="lecButton" buttonType="RAISED" layoutX="729.0" layoutY="649.0" onAction="#lecOnAction" onMouseEntered="#mouseEntered" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: white;" text="LECTURER LOGIN.">
+      <JFXButton fx:id="lecButton" buttonType="RAISED" layoutX="721.0" layoutY="649.0" onAction="#lecOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: white;" text="LECTURER LOGIN.">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="studentButton" buttonType="RAISED" layoutX="986.0" layoutY="649.0" onAction="#studentOnAction" onMouseEntered="#mouseEntered" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: white;" text="STUDENT LOGIN.">
+      <JFXButton fx:id="studentButton" buttonType="RAISED" layoutX="986.0" layoutY="649.0" onAction="#studentOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: white;" text="STUDENT LOGIN.">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
@@ -69,7 +69,7 @@
                   <Font name="System Bold Italic" size="13.0" />
                </font>
             </Label>
-            <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="104.0" layoutY="400.0" onAction="#loginOnAction" onMouseEntered="#mouseEntered" prefHeight="32.0" prefWidth="211.0" style="-fx-background-color: FDC601;" text="LOGIN." textFill="#140000">
+            <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="104.0" layoutY="400.0" onAction="#loginOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="32.0" prefWidth="211.0" style="-fx-background-color: FDC601;" text="LOGIN." textFill="#140000">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></JFXButton>

@@ -129,20 +129,21 @@ public class HomeScreenController implements Initializable {
     public void mouseEntered(MouseEvent mouseEvent) {
         String s =mouseEvent.getPickResult().getIntersectedNode().getId();
         if(s.equals("lecButton")){
-            System.out.println(lecButton.toString());
-            Animator.setShake(lecButton);
-          lecButton.setRipplerFill(Paint.valueOf("RED"));
+            animateAndPaint(lecButton);
+          lecButton.setTextFill(Paint.valueOf("WHITE"));
         }
         if(s.equals("studentButton")){
-            System.out.println(studentButton.toString());
-            Animator.setShake(studentButton);
-            studentButton.setRipplerFill(Paint.valueOf("RED"));
+            animateAndPaint(studentButton);
+            studentButton.setTextFill(Paint.valueOf("WHITE"));
         }
         if(s.equals("loginButton")){
-            System.out.println(loginButton.toString());
-            Animator.setShake(loginButton);
-            loginButton.setRipplerFill(Paint.valueOf("RED"));
+            animateAndPaint(loginButton);
+            loginButton.setTextFill(Paint.valueOf("WHITE"));
         }
+    }
+    public void animateAndPaint(Node node){
+        Animator.setShake(node);
+        node.setStyle("-fx-background-color: BLACK");
     }
 
 
@@ -150,4 +151,23 @@ public class HomeScreenController implements Initializable {
         t2.requestFocus();
     }
 
+    public void mouseExited(MouseEvent mouseEvent) {
+        String s = ((Button) mouseEvent.getSource()).getId();//Getting the ID of the exited node.
+        if(s.equals("lecButton")){
+            resetColor(lecButton);
+            lecButton.setTextFill(Paint.valueOf("BLACK"));
+        }
+        if(s.equals("studentButton")){
+          resetColor(studentButton);
+            studentButton.setTextFill(Paint.valueOf("BLACK"));
+        }
+        if(s.equals("loginButton")){
+            resetColor(loginButton);
+            loginButton.setTextFill(Paint.valueOf("BLACK"));
+        }
+    }
+    public void resetColor(Node node){
+        Animator.setShake(node);
+        node.setStyle("-fx-background-color: #fdfdfd");
+    }
 }

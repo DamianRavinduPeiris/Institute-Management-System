@@ -11,7 +11,7 @@
    <children>
       <AnchorPane fx:id="ap" layoutX="314.0" layoutY="89.0" prefHeight="707.0" prefWidth="1086.0">
          <children>
-            <ImageView fx:id="image" fitHeight="732.0" fitWidth="1049.0" layoutX="49.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="image" fitHeight="732.0" fitWidth="1049.0" layoutX="49.0" layoutY="7.0" onMouseEntered="#mouseEntered" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/lecDashBoard.png" />
                </image>
@@ -47,57 +47,57 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <JFXButton fx:id="myDetailsButton" buttonType="RAISED" layoutX="-3.0" layoutY="265.0" onAction="#myDetailsOnAction" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="EDIT/VIEW MY DETAILS." textFill="#f8eded">
+      <JFXButton fx:id="manageCCS" buttonType="RAISED" layoutX="-3.0" layoutY="340.0" onAction="#manageCCSOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="CCS STUDENTS." textFill="#f5ebeb">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="manageCCS" buttonType="RAISED" layoutX="-3.0" layoutY="340.0" onAction="#manageCCSOnAction" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="CCS STUDENTS." textFill="#f5ebeb">
+      <JFXButton fx:id="hndAnnouncements" buttonType="RAISED" layoutX="4.0" layoutY="418.0" onAction="#hndAnnouncementsOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="HND ANNOUNCEMENTS." textFill="#eee2e2">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="hndAnnouncements" buttonType="RAISED" layoutX="4.0" layoutY="418.0" onAction="#hndAnnouncementsOnAction" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="HND ANNOUNCEMENTS." textFill="#eee2e2">
+      <JFXButton fx:id="ccsAttendance" buttonType="RAISED" layoutX="4.0" layoutY="507.0" onAction="#ccsAttendanceOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="CCS ATTENDANCE." textFill="#f5efef">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="ccsAttendance" buttonType="RAISED" layoutX="4.0" layoutY="507.0" onAction="#ccsAttendanceOnAction" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="CCS ATTENDANCE." textFill="#f5efef">
+      <JFXButton fx:id="homeButton" buttonType="RAISED" layoutX="-4.0" layoutY="595.0" onAction="#homeOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="47.0" prefWidth="316.0" style="-fx-background-color: black;" text="HOME." textFill="#f2e8e8">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="homeButton" buttonType="RAISED" layoutX="-4.0" layoutY="595.0" onAction="#homeOnAction" prefHeight="47.0" prefWidth="316.0" style="-fx-background-color: black;" text="HOME." textFill="#f2e8e8">
+      <JFXButton fx:id="manageHND" buttonType="RAISED" layoutX="-4.0" layoutY="340.0" onAction="#manageHNDOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="HND STUDENTS." textFill="#eee8e8">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="manageHND" buttonType="RAISED" layoutX="-4.0" layoutY="340.0" onAction="#manageHNDOnAction" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="HND STUDENTS." textFill="#eee8e8">
+      <JFXButton fx:id="manageUndergrad" buttonType="RAISED" layoutX="-3.0" layoutY="340.0" onAction="#manageUndergradOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="UNDERGRAD STUDENTS." textFill="#fcf0f0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="manageUndergrad" buttonType="RAISED" layoutX="-3.0" layoutY="340.0" onAction="#manageUndergradOnAction" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="UNDERGRAD STUDENTS." textFill="#fcf0f0">
+      <JFXButton fx:id="ccsAnnouncements" buttonType="RAISED" layoutY="418.0" onAction="#ccsAnnouncementsOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="CCS ANNOUNCEMENTS." textFill="#eee3e3">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="ccsAnnouncements" buttonType="RAISED" layoutY="418.0" onAction="#ccsAnnouncementsOnAction" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="CCS ANNOUNCEMENTS." textFill="#eee3e3">
+      <JFXButton fx:id="undergradAnnouncements" buttonType="RAISED" layoutX="-3.0" layoutY="418.0" onAction="#undergradAnnouncementsOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="UNDERGRAD ANNOUNCEMENTS." textFill="#e4e1e1">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="undergradAnnouncements" buttonType="RAISED" layoutX="-3.0" layoutY="418.0" onAction="#undergradAnnouncementsOnAction" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="UNDERGRAD ANNOUNCEMENTS." textFill="#e4e1e1">
+      <JFXButton fx:id="hndAttendance" buttonType="RAISED" layoutX="4.0" layoutY="507.0" onAction="#hndAttendanceOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="HND ATTENDANCE." textFill="#ebe2e2">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="hndAttendance" buttonType="RAISED" layoutX="4.0" layoutY="507.0" onAction="#hndAttendanceOnAction" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="HND ATTENDANCE." textFill="#ebe2e2">
+      <JFXButton fx:id="undergradAttendance" buttonType="RAISED" layoutX="-4.0" layoutY="507.0" onAction="#undergradAttendanceOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="UNDERGRAD ATTENDANCE." textFill="#f5e7e7">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="undergradAttendance" buttonType="RAISED" layoutX="-4.0" layoutY="507.0" onAction="#undergradAttendanceOnAction" prefHeight="47.0" prefWidth="309.0" style="-fx-background-color: black;" text="UNDERGRAD ATTENDANCE." textFill="#f5e7e7">
+      <JFXButton fx:id="myDetailsButton" buttonType="RAISED" layoutX="-3.0" layoutY="254.0" onAction="#myDetailsOnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="47.0" prefWidth="316.0" style="-fx-background-color: black;" text="EDIT/VIEW MY DETAILS." textFill="#f8eded">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

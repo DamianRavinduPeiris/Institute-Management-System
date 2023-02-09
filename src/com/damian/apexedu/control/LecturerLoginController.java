@@ -99,25 +99,31 @@ public class LecturerLoginController implements Initializable {
     }
 
     public void loginOnAction(ActionEvent actionEvent) throws IOException {
-            status = cmb.getValue().toString();
+                if(cmb.getValue()==null && t1.getText().isEmpty() && t2.getText().isEmpty()){
+                AlertSender.sendAlert("Fields cannot be null!","WARNING!", Alert.AlertType.WARNING);
 
-            Lecturer_CredentialsServiceImpl lcs = ServiceFactory.getServiceObject(ServiceTypes.LECTURER_CREDENTIALS);
-            Lecturer_Credentials_DTO lcdto = lcs.searchByEmail(t1.getText());//Getting the lecturer credentials from the database.
+                }
+                else{
+                    status = cmb.getValue().toString();
+                    Lecturer_CredentialsServiceImpl lcs = ServiceFactory.getServiceObject(ServiceTypes.LECTURER_CREDENTIALS);
+                    Lecturer_Credentials_DTO lcdto = lcs.searchByEmail(t1.getText());//Getting the lecturer credentials from the database.
 
-            if(lcdto!=null && t1.getText().equals(lcdto.getUsername()) && t2.getText().equals(lcdto.getPassword())){
-                Lecturer_DetailsServiceImpl lds = ServiceFactory.getServiceObject(ServiceTypes.LECTURER_DETAILS);
-                Lecturer_Details_DTO ld = lds.search(lcdto.getLecturer_id());//Getting the lecturer details from the database.
-                lecName = ld.getLecturer_name();
-                lecID = ld.getLecturer_id();
-                Stage stage = (Stage)loginButton.getScene().getWindow();
-                Navigator.navigate(stage,Routes.LECTURERDASHBOARD);
+                    if(lcdto!=null && t1.getText().equals(lcdto.getUsername()) && t2.getText().equals(lcdto.getPassword())){
+                        Lecturer_DetailsServiceImpl lds = ServiceFactory.getServiceObject(ServiceTypes.LECTURER_DETAILS);
+                        Lecturer_Details_DTO ld = lds.search(lcdto.getLecturer_id());//Getting the lecturer details from the database.
+                        lecName = ld.getLecturer_name();
+                        lecID = ld.getLecturer_id();
+                        Stage stage = (Stage)loginButton.getScene().getWindow();
+                        Navigator.navigate(stage,Routes.LECTURERDASHBOARD);
 
-            }else{
-                AlertSender.sendAlert("ENTER VALID CREDENTIALS!","WARNING!", Alert.AlertType.WARNING);
-                Animator.setShake(t1);
-                Animator.setShake(t2);
-                t2.requestFocus();
-            }
+                    }else{
+                        AlertSender.sendAlert("ENTER VALID CREDENTIALS!","WARNING!", Alert.AlertType.WARNING);
+                        Animator.setShake(t1);
+                        Animator.setShake(t2);
+                        t2.requestFocus();
+                    }
+
+                }
     }
 
     public void fpOnAction(MouseEvent mouseEvent) {

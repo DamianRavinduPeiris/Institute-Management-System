@@ -10,10 +10,17 @@ import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.effect.Bloom;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Lighting;
+import javafx.scene.effect.MotionBlur;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -167,5 +174,113 @@ public class LecturerDashBoardController implements Initializable {
     public void myDetailsOnAction(ActionEvent actionEvent) throws IOException {
         status = "lecturerDashBoard";
         Navigator.navigate(ap,Routes.LECTURERS);
+    }
+
+    public void mouseEntered(MouseEvent mouseEvent) {
+        String s = mouseEvent.getPickResult().getIntersectedNode().getId();
+        if(s.equals("image")){
+            Animator.setShake(image);
+        }
+        if(s.equals("myDetailsButton")){
+            myDetailsButton.setTextFill(Color.BLACK);
+            animateAndPaint(myDetailsButton);
+        }if(s.equals("ccsAttendance")){
+            ccsAttendance.setTextFill(Color.BLACK);
+            animateAndPaint(ccsAttendance);
+        }
+        if(s.equals("hndAttendance")){
+            hndAttendance.setTextFill(Color.BLACK);
+            animateAndPaint(hndAttendance);
+        }
+        if(s.equals("undergradAttendance")){
+            undergradAttendance.setTextFill(Color.BLACK);
+            animateAndPaint(undergradAttendance);
+        }
+        if(s.equals("ccsAnnouncements")){
+            ccsAnnouncements.setTextFill(Color.BLACK);
+            animateAndPaint(ccsAnnouncements);
+        }
+        if(s.equals("hndAnnouncements")){
+            hndAnnouncements.setTextFill(Color.BLACK);
+            animateAndPaint(hndAnnouncements);
+        }
+        if(s.equals("undergradAnnouncements")){
+            undergradAnnouncements.setTextFill(Color.BLACK);
+            animateAndPaint(undergradAnnouncements);
+        }
+        if(s.equals("manageCCS")){
+            manageCCS.setTextFill(Color.BLACK);
+            animateAndPaint(manageCCS);
+        }
+        if (s.equals("manageHND")){
+            manageHND.setTextFill(Color.BLACK);
+            animateAndPaint(manageHND);
+        }
+        if(s.equals("manageUndergrad")){
+            manageUndergrad.setTextFill(Color.BLACK);
+            animateAndPaint(manageUndergrad);
+        }
+        if(s.equals("homeButton")){
+            homeButton.setTextFill(Color.BLACK);
+            animateAndPaint(homeButton);
+        }
+    }
+    public void animateAndPaint(Node node){
+        Animator.setShake(node);
+        node.requestFocus();
+        node.setStyle("-fx-background-color: #ffffff");
+    }
+
+
+    public void mouseExited(MouseEvent mouseEvent) {
+        String s = ((Button) mouseEvent.getSource()).getId();//Getting the ID of the exited node.
+        if(s.equals("myDetailsButton")){
+            myDetailsButton.setTextFill(Color.WHITE);
+            resetColor(myDetailsButton);
+        }if(s.equals("ccsAttendance")){
+            ccsAttendance.setTextFill(Color.WHITE);
+            resetColor(ccsAttendance);
+        }
+        if(s.equals("hndAttendance")){
+            hndAttendance.setTextFill(Color.WHITE);
+            resetColor(hndAttendance);
+        }
+        if(s.equals("undergradAttendance")){
+            undergradAttendance.setTextFill(Color.WHITE);
+            resetColor(undergradAttendance);
+        }
+        if(s.equals("ccsAnnouncements")){
+            ccsAnnouncements.setTextFill(Color.WHITE);
+            resetColor(ccsAnnouncements);
+        }
+        if(s.equals("hndAnnouncements")){
+            hndAnnouncements.setTextFill(Color.WHITE);
+            resetColor(hndAnnouncements);
+        }
+        if(s.equals("undergradAnnouncements")){
+            undergradAnnouncements.setTextFill(Color.WHITE);
+            resetColor(undergradAnnouncements);
+        }
+        if(s.equals("manageCCS")){
+            manageCCS.setTextFill(Color.WHITE);
+            resetColor(manageCCS);
+        }
+        if (s.equals("manageHND")){
+            manageHND.setTextFill(Color.WHITE);
+            resetColor(manageHND);
+        }
+        if(s.equals("manageUndergrad")){
+            manageUndergrad.setTextFill(Color.WHITE);
+            resetColor(manageUndergrad);
+        }
+        if(s.equals("homeButton")){
+            homeButton.setTextFill(Color.WHITE);
+            resetColor(homeButton);
+        }
+
+    }
+    public void resetColor(Node node){
+        Animator.setShake(node);
+        node.setStyle("-fx-background-color: #0e0e0e");
     }
 }
