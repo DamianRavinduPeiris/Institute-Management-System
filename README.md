@@ -4,6 +4,13 @@
 
 ![image](https://user-images.githubusercontent.com/115478137/217310498-b8f94599-21a2-4a7c-958f-14749b340408.png)
 
+https://user-images.githubusercontent.com/115478137/217751874-91a9c211-5ce2-486c-bfe9-40649755fe0f.mp4
+
+
+
+
+
+
 <u>Steps to Run.<u>
 
     1.Clone this repository.
@@ -62,13 +69,6 @@
     5.View+Add payment records.
   
   # Sample video.  
-
-  <video src="https://user-images.githubusercontent.com/115478137/217321347-f8426d21-e959-485e-adf7-7a6b88f2327f.mp4"></video>
-
-
-
-
-
 
 
 # Libraries Used.
