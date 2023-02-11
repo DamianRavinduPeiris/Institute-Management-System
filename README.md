@@ -68,8 +68,6 @@ https://user-images.githubusercontent.com/115478137/217751874-91a9c211-5ce2-486c
     4.Join online classes.(Using JavaFX webview API.)  
     5.View+Add payment records.
   
-  # Sample video.  
-
 
 # Libraries Used.
 
