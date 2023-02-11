@@ -2,6 +2,8 @@ package com.damian.apexedu.control;
 
 import animatefx.animation.JackInTheBox;
 import com.damian.apexedu.animations.Animator;
+import com.damian.apexedu.util.AlertSender;
+import com.damian.apexedu.util.GetAlert;
 import com.damian.apexedu.util.Navigator;
 import com.damian.apexedu.util.Routes;
 import com.jfoenix.controls.JFXButton;
@@ -10,17 +12,23 @@ import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 import java.lang.annotation.Native;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class OnlineClassesController implements Initializable {
@@ -45,6 +53,8 @@ public class OnlineClassesController implements Initializable {
             }
         };
         timer.start();
+
+
     }
 
     public void urlFieldOnAction(ActionEvent actionEvent) {

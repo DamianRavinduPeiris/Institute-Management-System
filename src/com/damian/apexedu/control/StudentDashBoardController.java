@@ -2,6 +2,8 @@ package com.damian.apexedu.control;
 
 import animatefx.animation.JackInTheBox;
 import com.damian.apexedu.animations.Animator;
+import com.damian.apexedu.util.AlertSender;
+import com.damian.apexedu.util.GetAlert;
 import com.damian.apexedu.util.Navigator;
 import com.damian.apexedu.util.Routes;
 import com.jfoenix.controls.JFXButton;
@@ -9,7 +11,9 @@ import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -19,11 +23,15 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 
+import java.awt.*;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class StudentDashBoardController implements Initializable {
@@ -189,8 +197,27 @@ public class StudentDashBoardController implements Initializable {
     }
 
     public void obButtonOnAction(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage)homeButton.getScene().getWindow();
-        Navigator.navigate(stage,Routes.WEB);
+        Alert a = GetAlert.getInstance().getAlertReference();
+        a.setContentText("Do you want to open your default browser!");
+        a.setAlertType(Alert.AlertType.CONFIRMATION);
+        Optional<ButtonType> buttonType = a.showAndWait();
+        if(buttonType.get()==ButtonType.OK){
+            Desktop d = Desktop.getDesktop();
+            if(NoticeViewerController.url.isEmpty()){
+                AlertSender.sendAlert("No URL found on your clipboard,select it from your notice table!","WARNING!", Alert.AlertType.WARNING);
+            }else {
+                try {
+                    URI url = new URI(NoticeViewerController.url);
+                    d.browse(url);
+                } catch (URISyntaxException e) {
+                    AlertSender.sendAlert("An error occurred while opening the default browser!", "WARNING!", Alert.AlertType.WARNING);
+                }
+            }
+        }else {
+            Stage stage = (Stage) homeButton.getScene().getWindow();
+            Navigator.navigate(stage, Routes.WEB);
+        }
+
     }
 
     public void mouseEntered(MouseEvent mouseEvent) {

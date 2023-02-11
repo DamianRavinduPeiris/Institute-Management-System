@@ -1,6 +1,4 @@
 package com.damian.apexedu.control;
-
-import animatefx.animation.JackInTheBox;
 import com.damian.apexedu.animations.Animator;
 import com.damian.apexedu.dto.CCS_Announcements_DTO;
 import com.damian.apexedu.dto.HND_Announcements_DTO;
@@ -37,7 +35,7 @@ public class NoticeViewerController implements Initializable {
     public TableColumn c4;
     public JFXButton b1;
     public JFXTextField t1;
-    public static String  links;
+    public static String  url;
     public static CCS_Announcements_DTO ca;
     public static HND_Announcements_DTO ha;
     public static UNDERGRAD_Announcements_DTO ua;
@@ -95,15 +93,18 @@ public class NoticeViewerController implements Initializable {
         if(StudentLoginController.status.equals("CCS.")){
             ca = (CCS_Announcements_DTO)tableView.getSelectionModel().getSelectedItem();
             t1.setText(ca.getDescription());
+            url = t1.getText();
 
         }
         if(StudentLoginController.status.equals("HND.")){
             ha = (HND_Announcements_DTO) tableView.getSelectionModel().getSelectedItem();
             t1.setText(ha.getDescription());
+            url = t1.getText();
         }
         if(StudentLoginController.status.equals("UNDERGRAD.")){
             ua = (UNDERGRAD_Announcements_DTO) tableView.getSelectionModel().getSelectedItem();
             t1.setText(ua.getDescription());
+            url = t1.getText();
         }
     }
 }
