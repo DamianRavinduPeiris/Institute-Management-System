@@ -146,7 +146,6 @@ public class HNDController implements Initializable,Runnable {
                     boolean b1 = hndDetailsService.add(hnd);
                     if(b1){
                         AlertSender.sendAlert("Added!","INFORMATION.", Alert.AlertType.INFORMATION);
-                        run();
 
                     }
 

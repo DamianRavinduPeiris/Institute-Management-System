@@ -160,7 +160,6 @@ public class UnderGradController implements Initializable,Runnable {
                     boolean b1 = undergrad.add(ud);
                     if(b1){
                         AlertSender.sendAlert("Added!","INFORMATION.", Alert.AlertType.INFORMATION);
-                        run();
                     }
 
                 }

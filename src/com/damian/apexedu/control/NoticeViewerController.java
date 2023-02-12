@@ -35,7 +35,7 @@ public class NoticeViewerController implements Initializable {
     public TableColumn c4;
     public JFXButton b1;
     public JFXTextField t1;
-    public static String  url;
+    public static String  url="";
     public static CCS_Announcements_DTO ca;
     public static HND_Announcements_DTO ha;
     public static UNDERGRAD_Announcements_DTO ua;

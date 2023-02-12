@@ -205,7 +205,8 @@ public class StudentDashBoardController implements Initializable {
             Desktop d = Desktop.getDesktop();
             if(NoticeViewerController.url.isEmpty()){
                 AlertSender.sendAlert("No URL found on your clipboard,select it from your notice table!","WARNING!", Alert.AlertType.WARNING);
-            }else {
+            }
+            else {
                 try {
                     URI url = new URI(NoticeViewerController.url);
                     d.browse(url);

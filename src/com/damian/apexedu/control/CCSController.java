@@ -135,7 +135,6 @@ public class CCSController implements Initializable,Runnable {
                     boolean add = c.add(ccs);
                     if(add){
                         AlertSender.sendAlert("Added!","INFORMATION.", Alert.AlertType.INFORMATION);
-                        run();
                     }
 
                 } else {
