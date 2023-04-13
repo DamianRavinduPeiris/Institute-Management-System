@@ -7,18 +7,6 @@
 https://user-images.githubusercontent.com/115478137/217751874-91a9c211-5ce2-486c-bfe9-40649755fe0f.mp4  
 
 
-
-
-
-
-
-<u>🏃‍♂️ `Steps to Run.`<u>
-
-    1.Clone this repository.
-    2.Open the project in IntelliJ IDEA.
-    3.Configure the database (refer to the table information.txt file).
-    4.Run the AppInitializer.main file.
-    5.Enter your SQL username and password in the first window that appears.  
     
     
 ![image](https://user-images.githubusercontent.com/115478137/217314622-d9dea7f2-828b-40fa-bd45-9d8f0bf41d42.png)
@@ -31,13 +19,13 @@ https://user-images.githubusercontent.com/115478137/217751874-91a9c211-5ce2-486c
 ![image](https://user-images.githubusercontent.com/115478137/217314757-78007170-c402-43fc-9c12-59a175bcde74.png)
 
 
-*Default username and password: admin.*  
+*Default username and password: `admin`.*  
 
 ![image](https://user-images.githubusercontent.com/115478137/217314970-32846320-50d1-4265-9855-59c83e1825bc.png)
 
 
-    1.Perform CRUD operations on students (Create, Read, Update, Delete).
-    2.Perform CRUD operations on lecturers (Create, Read, Update, Delete).
+    1.Perform CRUD operations on students.
+    2.Perform CRUD operations on lecturers.
     3.View, update, and delete attendance records of students.
     4.View finance details with pie chart, bar chart, and Jasper report views.
 
@@ -72,8 +60,8 @@ https://user-images.githubusercontent.com/115478137/217751874-91a9c211-5ce2-486c
 
 # 🚀 `Libraries Used.`
 
-    1.MySQL Connector for JDBC connection.
-    2.AnimateFX for animations.
-    3.JFoenix for Material Design.
-    4.JavaX Mail for sending emails upon student registration.
+`MySQL Connector` for JDBC connection.  
+<a href="https://github.com/Typhon0/AnimateFX">`AnimateFX`</a> for animations.  
+ <a href="https://github.com/sshahine/JFoenix">`JFoenix`</a> for Material Design.  
+ `JavaX Mail` for sending emails upon student registration.  
 
