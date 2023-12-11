@@ -1,11 +1,5 @@
 # <u>🏫 `Institute Management System.`<u>
 
-## 🚧 This program was built using `JDK 1.8.`
-
-![image](https://user-images.githubusercontent.com/115478137/217310498-b8f94599-21a2-4a7c-958f-14749b340408.png)
-
-https://user-images.githubusercontent.com/115478137/217751874-91a9c211-5ce2-486c-bfe9-40649755fe0f.mp4  
-
 
     
     
@@ -14,7 +8,7 @@ https://user-images.githubusercontent.com/115478137/217751874-91a9c211-5ce2-486c
 *Features.*  
 
 
-# 🚨`Administrator.`
+🚨`Administrator.`
 
 ![image](https://user-images.githubusercontent.com/115478137/217314757-78007170-c402-43fc-9c12-59a175bcde74.png)
 
@@ -29,7 +23,7 @@ https://user-images.githubusercontent.com/115478137/217751874-91a9c211-5ce2-486c
     3.View, update, and delete attendance records of students.
     4.View finance details with pie chart, bar chart, and Jasper report views.
 
-# 🧑‍🏫 `Lecturers.`
+ 🧑‍🏫 `Lecturers.`
 
 ![image](https://user-images.githubusercontent.com/115478137/217315090-cb945f0a-74c2-43d0-be3c-25b8e7ad1fda.png)  
 
@@ -43,7 +37,7 @@ https://user-images.githubusercontent.com/115478137/217751874-91a9c211-5ce2-486c
     4.Manage their relevant student's attendance with CRUD operations.
 
 
-# 🧑‍🎓 `Students.`  
+ 🧑‍🎓 `Students.`  
 
 ![image](https://user-images.githubusercontent.com/115478137/217316607-2ff5bd5b-ab77-4909-ab94-8884db7ebe1b.png)  
 
@@ -58,7 +52,7 @@ https://user-images.githubusercontent.com/115478137/217751874-91a9c211-5ce2-486c
     5.View+Add payment records.
   
 
-# 🚀 `Libraries Used.`
+🚀 `Libraries Used.`
 
 `MySQL Connector` for JDBC connection.  
 <a href="https://github.com/Typhon0/AnimateFX">`AnimateFX`</a> for animations.  
